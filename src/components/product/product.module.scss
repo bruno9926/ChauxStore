@@ -5,9 +5,11 @@ $card-radius: 8px;
 .card {
     width: 100%;
     max-width: 250px;
+    min-width: 250px;
     background-color: #E8E8E8;
     border-radius: $card-radius;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .imageWrapper {

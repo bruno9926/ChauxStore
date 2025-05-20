@@ -29,9 +29,3 @@ a {
   color: inherit;
   text-decoration: none;
 }
-
-.products {
-  display: flex;
-  gap: 1rem;
-  margin-top: 1rem;
-}
