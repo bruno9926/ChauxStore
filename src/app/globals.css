@@ -1,19 +1,6 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+  --background: #ececec;
+  --foreground: #313131;
 }
 
 html,
@@ -28,6 +15,8 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  padding: 1rem;
+
 }
 
 * {
@@ -39,4 +28,10 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+.products {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
 }
