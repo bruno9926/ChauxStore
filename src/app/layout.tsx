@@ -1,13 +1,13 @@
+// components
+import Navbar from "@/components/navbar/navbar";
+// fonts
 import type { Metadata } from "next";
-import { Poppins, Urbanist } from "next/font/google";
+// styles
 import "./globals.css";
+// others
+import { Urbanist } from "next/font/google";
 
 const urbanist = Urbanist({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
-});
-
-const poppins = Poppins({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800"],
 });
@@ -25,6 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={urbanist.className}>
+        <Navbar />
         {children}
       </body>
     </html>

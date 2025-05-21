@@ -1,11 +1,14 @@
 import SectionCarousel from "@/components/SectionCarousel/SectionCarousel";
+import Hero from "@/components/Hero/Hero";
 import products from "@/data/products.json";
 
 export default function Home() {
   return (
     <div>
-      <h1>CX</h1>
-      <SectionCarousel title="New Arrivals" products={products} />
+      <Hero />
+      <div className="container">
+        <SectionCarousel title="New Arrivals" products={products} />
+      </div>
     </div>
   );
 }
