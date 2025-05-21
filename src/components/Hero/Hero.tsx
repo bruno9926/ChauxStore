@@ -1,9 +1,13 @@
 import styles from './Hero.module.scss';
+import Image from 'next/image';
 
 export default function Hero() {
     return (
         <div className={styles.hero}>
-            <div className={styles.content}>
+            <div className={styles.imageWrapper}>
+                <Image src="/images/step-into-the-flame.png" alt="Hero Image" className={styles.image} fill />
+            </div>
+            <div className={styles.overlay}>
                 <h1>Welcome to our store</h1>
                 <p>Discover the latest trends in fashion and accessories.</p>
                 <div className={styles.buttonContainer}>
