@@ -1,9 +1,10 @@
 'use client';
 
 import { useRef } from 'react';
-import Product from '../product/product';
-import styles from './slider.module.scss';
+import Product from '@/components/product/product';
 import { GoArrowRight, GoArrowLeft } from "react-icons/go";   
+// styles
+import styles from './slider.module.scss';
 
 export default function Slider({ products }: { products: any[] }) {
 
