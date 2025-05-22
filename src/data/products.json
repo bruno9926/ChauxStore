@@ -14,88 +14,11 @@
     "isFavorite": false
   },
   {
-    "image": "/images/products/beanie.png",
-    "title": "Carbon Beanie",
-    "subtitle": "Hats and Caps",
+    "image": "/images/products/lavander-crewneck.png",
+    "title": "Lavander Ember Crewneck",
+    "subtitle": "Blouses",
     "price": 4999,
     "isFavorite": true
-  },
-  {
-    "image": "/images/products/distortion-flame.png",
-    "title": "Distortion Blue Flame",
-    "subtitle": "Oversized T-Shirt",
-    "price": 4999,
-    "isFavorite": true
-  },
-  {
-    "image": "/images/products/flame-bomber.png",
-    "title": "Purple Bomber Flame",
-    "subtitle": "Bomber Jacket",
-    "price": 4999,
-    "isFavorite": false
-  },
-  {
-    "image": "/images/products/beanie.png",
-    "title": "Carbon Beanie",
-    "subtitle": "Hats and Caps",
-    "price": 4999,
-    "isFavorite": true
-  },
-  {
-    "image": "/images/products/distortion-flame.png",
-    "title": "Distortion Blue Flame",
-    "subtitle": "Oversized T-Shirt",
-    "price": 4999,
-    "isFavorite": true
-  },
-  {
-    "image": "/images/products/flame-bomber.png",
-    "title": "Purple Bomber Flame",
-    "subtitle": "Bomber Jacket",
-    "price": 4999,
-    "isFavorite": false
-  },
-  {
-    "image": "/images/products/beanie.png",
-    "title": "Carbon Beanie",
-    "subtitle": "Hats and Caps",
-    "price": 4999,
-    "isFavorite": true
-  },
-  {
-    "image": "/images/products/distortion-flame.png",
-    "title": "Distortion Blue Flame",
-    "subtitle": "Oversized T-Shirt",
-    "price": 4999,
-    "isFavorite": true
-  },
-  {
-    "image": "/images/products/flame-bomber.png",
-    "title": "Purple Bomber Flame",
-    "subtitle": "Bomber Jacket",
-    "price": 4999,
-    "isFavorite": false
-  },
-  {
-    "image": "/images/products/beanie.png",
-    "title": "Carbon Beanie",
-    "subtitle": "Hats and Caps",
-    "price": 4999,
-    "isFavorite": true
-  },
-  {
-    "image": "/images/products/distortion-flame.png",
-    "title": "Distortion Blue Flame",
-    "subtitle": "Oversized T-Shirt",
-    "price": 4999,
-    "isFavorite": true
-  },
-  {
-    "image": "/images/products/flame-bomber.png",
-    "title": "Purple Bomber Flame",
-    "subtitle": "Bomber Jacket",
-    "price": 4999,
-    "isFavorite": false
   },
   {
     "image": "/images/products/beanie.png",
