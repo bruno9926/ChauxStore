@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div>
       <Hero />
-      <div className="container">
+      <div className="padded-container">
         <SectionCarousel title="New Arrivals" products={products} />
       </div>
     </div>

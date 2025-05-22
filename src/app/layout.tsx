@@ -1,5 +1,6 @@
 // components
 import Navbar from "@/components/navbar/navbar";
+import Footer from "@/components/Footer/Footer";
 // fonts
 import type { Metadata } from "next";
 // styles
@@ -26,7 +27,10 @@ export default function RootLayout({
     <html lang="en">
       <body className={urbanist.className}>
         <Navbar />
-        {children}
+        <div className="main-container">
+          {children}
+        </div>
+        <Footer/>
       </body>
     </html>
   );
