@@ -6,7 +6,7 @@ export default function Hero() {
     return (
         <div className={styles.hero}>
             <div className={styles.imageWrapper}>
-                <Image src="/images/step-into-the-flame.png" alt="Hero Image" className={styles.image} fill />
+                <Image src="/images/hero6.png" alt="Hero Image" className={styles.image} fill />
             </div>
             <div className={styles.overlay}>
                 <h1>Welcome to our store</h1>
