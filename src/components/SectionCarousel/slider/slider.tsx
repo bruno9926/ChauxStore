@@ -5,8 +5,10 @@ import Product from '@/components/product/product';
 import { GoArrowRight, GoArrowLeft } from "react-icons/go";   
 // styles
 import styles from './slider.module.scss';
+// types
+import type ProductType from '@/types/Product';
 
-export default function Slider({ products }: { products: any[] }) {
+export default function Slider({ products }: { products: ProductType[] }) {
 
     enum Direction {
         LEFT = 'left',
