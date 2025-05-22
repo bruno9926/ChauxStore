@@ -1,0 +1,32 @@
+
+@mixin btn() {
+    padding: 16px;
+    border: none;
+    border-radius: 2.5rem;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    min-width: 8rem;
+}
+
+.primary {
+    @include btn;
+    color: white;
+    background-color: black;
+}
+
+.secondary {
+    @include btn;
+    color: black;
+    background-color: white;
+    border: 2px solid black;
+}
+
+.tertiary {
+    @include btn;
+    color: black;
+    background-color: transparent;
+    text-decoration: underline;
+    padding: 0;
+    min-width: fit-content;
+}
