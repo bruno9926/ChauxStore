@@ -30,11 +30,16 @@ const sections = [
 
 export default function Footer() {
     return (
-        <footer className={styles.footer}>
-            {sections.map((section, index) => (
-                <Section key={index} title={section.title} elements={section.elements} />
-            ))}
-        </footer>
+        <>
+            <footer className={styles.footer}>
+                {sections.map((section, index) => (
+                    <Section key={index} title={section.title} elements={section.elements} />
+                ))}
+            </footer>
+            <section className={styles.footerBottom}>
+                2025 CX, Colombia Ltda.
+            </section>
+        </>
     )
 }
 
