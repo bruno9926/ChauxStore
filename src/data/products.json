@@ -21,10 +21,38 @@
     "isFavorite": true
   },
   {
+    "image": "/images/products/graphite-jean.png",
+    "title": "Graphite Jean",
+    "subtitle": "jeans and Pants",
+    "price": 4999,
+    "isFavorite": true
+  },
+  {
     "image": "/images/products/beanie.png",
     "title": "Carbon Beanie",
     "subtitle": "Hats and Caps",
     "price": 4999,
     "isFavorite": true
+  },
+  {
+    "image": "/images/products/firefade-denim.png",
+    "title": "Firefade Denim",
+    "subtitle": "jeans and Pants",
+    "price": 4999,
+    "isFavorite": false
+  },
+  {
+    "image": "/images/products/burn-mark.png",
+    "title": "Burn Mark",
+    "subtitle": "Shirts",
+    "price": 4999,
+    "isFavorite": false
+  },
+  {
+    "image": "/images/products/burnt-classic.png",
+    "title": "Burnt Red Classic",
+    "subtitle": "Shirts",
+    "price": 4999,
+    "isFavorite": false
   }
 ]
