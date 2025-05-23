@@ -1,8 +1,6 @@
 import styles from './CollectionCard.module.scss';
 import Image from 'next/image';
 
-import Button from '@/components/atoms/Button/Button';
-
 type CollectionCardProps = {
     name: string,
     image: string,
