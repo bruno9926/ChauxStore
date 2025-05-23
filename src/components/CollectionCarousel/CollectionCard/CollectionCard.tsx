@@ -8,7 +8,7 @@ type CollectionCardProps = {
 export default function CollectionCard({ image }: CollectionCardProps) {
     return (
         <div className={styles.card}>
-            <Image fill src="/images/hero3.png" alt='collection'/>
+            <Image fill src={image} alt='collection'/>
         </div>
     )
 }

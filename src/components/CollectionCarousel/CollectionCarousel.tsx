@@ -5,18 +5,18 @@ import styles from './CollectionCarousel.module.scss';
 const collections: Collection[] = [
     {
         id: '1',
-        name: 'step into the flame',
-        image: '/images/hero3.png'
+        name: 'Gol D Style',
+        image: '/images/gol-d-style.jpeg'
     },
     {
-        id: '1',
-        name: 'step into the flame',
-        image: '/images/hero3.png'
+        id: '2',
+        name: 'City Pop Dream',
+        image: '/images/city-pop-dream.jpeg'
     },
     {
-        id: '1',
+        id: '3',
         name: 'step into the flame',
-        image: '/images/hero3.png'
+        image: '/images/step-into-the-flame.jpeg'
     }
 ]
 
