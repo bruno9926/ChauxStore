@@ -1,12 +1,17 @@
 import styles from './Category.module.scss';
 import Image from 'next/image';
 
-export default function Category() {
+type CategoryProps = {
+    name: string,
+    image: string
+}
+
+export default function Category({ name, image }: CategoryProps) {
     return (
         <div className={styles.category}>
-            <Image alt="category" src="/images/products/distortion-flame.png" fill />
+            <Image alt={name} src={image} fill />
             <div className={styles.overlay}>
-                <h3>Shirts</h3>
+                <h3>{name}</h3>
             </div>
         </div>
     )
