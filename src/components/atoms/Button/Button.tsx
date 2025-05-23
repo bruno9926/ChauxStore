@@ -2,7 +2,7 @@ import styles from './Button.module.scss';
 
 type ButtonProps = {
     type?: 'primary' | 'secondary' | 'tertiary',
-    children: React.ReactNode
+    children?: React.ReactNode
 }
 
 export default function Button({ type = 'tertiary', children }: ButtonProps) {

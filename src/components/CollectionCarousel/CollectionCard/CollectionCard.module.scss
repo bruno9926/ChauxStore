@@ -24,4 +24,29 @@ $border-width: 1px;
       transition: all 0.3s ease-in-out;
     }
   }
+
+  .overlay {
+    --accent-color: #ccc;
+
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+
+    min-width: 13rem;
+    padding: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .5rem;
+
+    background-color: var(--accent-color);
+    box-shadow: -10px 10px 0px 0px #1f1f1f;
+
+    &:hover {
+      cursor: pointer;
+      transform: translate(5px, -5px);
+      transition: all 0.3s ease-in-out;
+    }
+  }
 }

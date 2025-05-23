@@ -6,17 +6,20 @@ const collections: Collection[] = [
     {
         id: '1',
         name: 'Gol D Style',
-        image: '/images/gol-d-style.jpeg'
+        image: '/images/gol-d-style.jpeg',
+        accentColor: '#c1a966'
     },
     {
         id: '2',
         name: 'City Pop Dream',
-        image: '/images/city-pop-dream.jpeg'
+        image: '/images/city-pop-dream.jpeg',
+        accentColor: '#72c07f'
     },
     {
         id: '3',
-        name: 'step into the flame',
-        image: '/images/step-into-the-flame.jpeg'
+        name: 'Step into The Flame',
+        image: '/images/step-into-the-flame.jpeg',
+        accentColor: '#ae93bf'
     }
 ]
 
@@ -26,7 +29,9 @@ export default function CollectionCarousel() {
             {collections.map((collection) => (
                 <CollectionCard
                     key={collection.id}
+                    name={collection.name}
                     image={collection.image}
+                    color={collection.accentColor}
                 />
             ))}
         </div>
