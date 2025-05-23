@@ -1,12 +1,5 @@
 [
   {
-    "image": "/images/products/distortion-flame.png",
-    "title": "Distortion Blue Flame",
-    "subtitle": "Oversized T-Shirt",
-    "price": 4999,
-    "isFavorite": true
-  },
-  {
     "image": "/images/products/flame-bomber.png",
     "title": "Purple Bomber Flame",
     "subtitle": "Bomber Jacket",
@@ -54,5 +47,12 @@
     "subtitle": "Shirts",
     "price": 4999,
     "isFavorite": false
+  },
+  {
+    "image": "/images/products/distortion-flame.png",
+    "title": "Distortion Blue Flame",
+    "subtitle": "Oversized T-Shirt",
+    "price": 4999,
+    "isFavorite": true
   }
 ]
