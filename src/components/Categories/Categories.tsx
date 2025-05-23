@@ -1,6 +1,5 @@
 import styles from "./Categories.module.scss";
 import Category from "./Category/Category";
-import type CategoryType from "@/types/Category";
 
 import categories from '@/data/categories.json';
 
