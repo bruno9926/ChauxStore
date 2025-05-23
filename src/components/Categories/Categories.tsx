@@ -10,7 +10,11 @@ export default function Categories() {
             <h1>Explore by Categories</h1>
             <div className={styles.categoriesContainer}>
                 {categories.map(category => (
-                    <Category name={category.name} image={category.image} />
+                    <Category
+                        key={category.id}
+                        name={category.name}
+                        image={category.image}
+                    />
                 ))}
             </div>
         </div>

@@ -9,30 +9,18 @@
     "id": "2",
     "name": "Pants",
     "slug": "pants",
-    "image": "/images/categories/shirts.png"
+    "image": "/images/categories/pants.png"
   },
   {
     "id": "3",
     "name": "Footwear",
     "slug": "footwear",
-    "image": "/images/categories/shirts.png"
+    "image": "/images/categories/shoes.png"
   },
   {
     "id": "4",
     "name": "Accessories",
     "slug": "accessories",
-    "image": "/images/categories/shirts.png"
-  },
-  {
-    "id": "5",
-    "name": "Oversized",
-    "slug": "oversized",
-    "image": "/images/categories/shirts.png"
-  },
-  {
-    "id": "6",
-    "name": "Streetwear",
-    "slug": "streetwear",
-    "image": "/images/categories/shirts.png"
+    "image": "/images/categories/accesories.jpeg"
   }
 ]
