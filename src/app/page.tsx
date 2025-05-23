@@ -9,8 +9,8 @@ export default function Home() {
     <div>
       <Hero />
       <div className="padded-container">
-        <SectionCarousel title="New Arrivals" products={products} />
         <Categories />
+        <SectionCarousel title="New Arrivals" products={products} />
       </div>
       <CollectionCarousel />
     </div>
