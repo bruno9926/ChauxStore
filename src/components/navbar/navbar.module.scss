@@ -34,7 +34,10 @@
         padding-top: 3px;
         border: none;
         cursor: pointer;
-        
+
+        border-color: transparent;
+        color: rgb(31, 31, 31);
+
         @media (max-width: $breakpoint-sm) {
             display: block;
         }
