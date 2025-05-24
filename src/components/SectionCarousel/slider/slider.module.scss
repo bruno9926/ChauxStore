@@ -7,7 +7,7 @@
   gap: 1rem;
   margin-top: 1rem;
   width: 100%;
-  overflow-x: hidden;
+  overflow-x: auto;
   padding-bottom: 1rem;
   scroll-behavior: smooth;
 
@@ -30,6 +30,10 @@ $arrow-size: 2.5rem;
   top: 50%;
   transform: translateY(-50%);
   z-index: 999;
+
+  @media (max-width: $breakpoint-sm) {
+    display: none;
+  }
 }
 
 .left {
