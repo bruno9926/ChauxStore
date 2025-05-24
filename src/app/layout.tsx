@@ -4,7 +4,7 @@ import Footer from "@/components/Footer/Footer";
 // fonts
 import type { Metadata } from "next";
 // styles
-import "./globals.css";
+import "./globals.scss";
 // others
 import { Urbanist } from "next/font/google";
 

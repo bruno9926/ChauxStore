@@ -1,27 +1,7 @@
 import CollectionCard from "./CollectionCard/CollectionCard";
-import type Collection from "@/types/Collection";
 import styles from './CollectionCarousel.module.scss';
 
-const collections: Collection[] = [
-    {
-        id: '1',
-        name: 'Gol D Style',
-        image: '/images/gol-d-style.jpeg',
-        accentColor: '#c1a966'
-    },
-    {
-        id: '2',
-        name: 'City Pop Dream',
-        image: '/images/city-pop-dream.jpeg',
-        accentColor: '#72c07f'
-    },
-    {
-        id: '3',
-        name: 'Step into The Flame',
-        image: '/images/step-into-the-flame.jpeg',
-        accentColor: '#ae93bf'
-    }
-]
+import collections from '@/data/collections.json';
 
 export default function CollectionCarousel() {
     return (

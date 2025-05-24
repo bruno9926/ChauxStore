@@ -1,12 +1,10 @@
 .category {
   aspect-ratio: 1/1;
   color: beige;
-
   position: relative;
   overflow: hidden;
 
   &:hover {
-
     cursor: pointer;
   }
 
@@ -35,8 +33,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
 
     font-size: 2rem;
+  }
+
+  @media (max-width: $breakpoint-sm) {
+    h3 {
+      font-size: 1.3rem;
+    }
   }
 }

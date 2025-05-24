@@ -6,7 +6,9 @@ import categories from '@/data/categories.json';
 export default function Categories() {
     return (
         <div className={styles.categories}>
-            <h1>Explore by Categories</h1>
+            <div className="padded-container">
+                <h1>Explore by Categories</h1>
+            </div>
             <div className={styles.categoriesContainer}>
                 {categories.map(category => (
                     <Category

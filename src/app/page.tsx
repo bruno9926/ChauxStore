@@ -8,8 +8,8 @@ export default function Home() {
   return (
     <div>
       <Hero />
+      <Categories />
       <div className="padded-container">
-        <Categories />
         <SectionCarousel title="New Arrivals" products={products} />
       </div>
       <CollectionCarousel />

@@ -5,13 +5,17 @@
 .slider {
   display: flex;
   gap: 1rem;
-  margin-top: 1rem;
   width: 100%;
-  overflow-x: auto;
-  padding-bottom: 1rem;
+  overflow-x: hidden;
   scroll-behavior: smooth;
-
+  
+  margin-top: 1rem;
+  padding-bottom: 1rem;
   padding: 0.15rem;
+
+  @media (max-width: $breakpoint-md) {
+    overflow-x: auto;
+  }
 }
 
 $arrow-size: 2.5rem;
@@ -31,7 +35,7 @@ $arrow-size: 2.5rem;
   transform: translateY(-50%);
   z-index: 999;
 
-  @media (max-width: $breakpoint-sm) {
+  @media (max-width: $breakpoint-md) {
     display: none;
   }
 }

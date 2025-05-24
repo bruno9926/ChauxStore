@@ -5,6 +5,11 @@
 
   margin-top: 3rem;
   margin-bottom: 4rem;
+  gap: .5rem;
+
+  @media (max-width: $breakpoint-sm) {
+    margin-top: 2rem;
+  }
 
   .collections {
     display: flex;
@@ -15,6 +20,7 @@
     @media (max-width: $breakpoint-sm) {
       flex-direction: column;
       height: fit-content;
+      gap: 0px;
     }
   }
 }
