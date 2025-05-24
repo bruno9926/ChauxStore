@@ -35,7 +35,8 @@
         border: none;
         cursor: pointer;
 
-        border-color: transparent;
+        background-color: transparent;
+        border: none;
         color: rgb(31, 31, 31);
 
         @media (max-width: $breakpoint-sm) {
