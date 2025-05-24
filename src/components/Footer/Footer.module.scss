@@ -9,6 +9,12 @@
     display: flex;
     justify-content: center;
     gap: 6rem;
+
+    @media (max-width: $breakpoint-sm) {
+        flex-direction: column;
+        gap: 3rem;
+        padding-top: 2rem;
+    }
 }
 
 .section {
