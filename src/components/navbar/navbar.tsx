@@ -1,13 +1,17 @@
 import styles from './navbar.module.scss';
 // icons
 import { GoHeart, GoPerson, GoSearch,  } from 'react-icons/go';
+import { HiMenu } from "react-icons/hi";
 import { IoBagOutline } from "react-icons/io5";
 
 export default function Navbar() {
   return (
     <header className={styles.navbar}>
-        <h2>CX</h2>
-        <nav className={styles.menu}>
+        <div className={styles.leftContainer}>
+            <MobileMenuButton />
+            <h2>CX</h2>
+        </div>
+        <nav className={styles.menuDesktop}>
             <a href="#">Men</a>
             <a href="#">Women</a>
             <a href="#">News</a>
@@ -21,6 +25,14 @@ export default function Navbar() {
         </div>
     </header>
   );
+}
+
+const MobileMenuButton = () => {
+    return (
+        <button className={styles.mobileMenuButton}>
+            <HiMenu size={24}/>
+        </button>
+    )
 }
 
 enum ActionType {
