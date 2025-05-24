@@ -6,7 +6,10 @@ export default function Hero() {
     return (
         <div className={styles.hero}>
             <div className={styles.imageWrapper}>
-                <Image src="/images/hero6.png" alt="Hero Image" className={styles.image} fill />
+                <picture>
+                    <source media='(max-width: 768px)' srcSet='/images/hero-mobile.png'/>
+                    <Image src="/images/hero-desktop.png" alt="Hero Image Desktop" className={styles.heroImage} fill />
+                </picture>
             </div>
             <div className={styles.overlay}>
                 <h1>Welcome to our store</h1>

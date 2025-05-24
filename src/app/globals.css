@@ -20,6 +20,7 @@ body {
 
 .main-container {
   min-height: 100rem;
+  padding-top: 2rem;
 }
 
 .padded-container {
