@@ -3,54 +3,17 @@ import { useState } from 'react';
 
 import styles from './MobileMenu.module.scss';
 import { HiX } from "react-icons/hi";
+import type MenuSection from '@/types/MenuSection';
 
 type MobileMenuProps = {
+    sections: MenuSection[]
     isOpen: boolean,
     setMobileMenuOpen: (open: boolean) => void
 }
 
-type Section = {
-    name: string,
-    categories: string[]
-}
+export default function MobileMenu({ sections, isOpen, setMobileMenuOpen }: MobileMenuProps) {
 
-const sections: Section[] = [
-  {
-    name: "Men",
-    categories: [
-      "Shirts",
-      "T-Shirts",
-      "Polos",
-      "Pants",
-      "Jeans",
-      "Shorts",
-      "Jackets",
-      "Hoodies",
-      "Shoes",
-      "Accessories"
-    ]
-  },
-  {
-    name: "Women",
-    categories: [
-      "Tops",
-      "Blouses",
-      "Dresses",
-      "Skirts",
-      "Pants",
-      "Jeans",
-      "Shorts",
-      "Jackets",
-      "Hoodies",
-      "Shoes",
-      "Accessories"
-    ]
-  }
-];
-
-export default function MobileMenu({ isOpen, setMobileMenuOpen }: MobileMenuProps) {
-
-    const [selectedSection, setSelectedSection] = useState<Section>(sections[0]);
+    const [selectedSection, setSelectedSection] = useState<MenuSection>(sections[0]);
     return (
         <div className={`${styles.menu} ${isOpen ? "" : styles.hidden}`}>
             <div className={styles.content}>

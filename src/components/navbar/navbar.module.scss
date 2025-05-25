@@ -1,55 +1,104 @@
 .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+
+  border-bottom: 1px solid rgb(129, 129, 129);
+  background-color: #fdfdfd;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.11);
+
+  .leftContainer {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 1rem;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    z-index: 999;
+    gap: 0.3rem;
+  }
 
-    border-bottom: 1px solid rgb(129, 129, 129);
-    background-color: #fdfdfd;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.11);
+  .menuDesktop {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    font-weight: 700;
 
-    .leftContainer {
-        display: flex;
-        align-items: center;
-        gap: .3rem;
+    @media (max-width: $breakpoint-sm) {
+      display: none;
     }
 
-    .menuDesktop {
-        display: flex;
-        gap: 2rem;
-        align-items: center;
-        font-weight: 700;
+    .menuItem {
+      position: relative;
 
-        @media (max-width: $breakpoint-sm) {
-            display: none;
-        }
-    }
+      &:hover .dropdownWrapper {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(0px);
+      }
 
-    .mobileMenuButton {
-        display: none;
-        padding-top: 3px;
-        border: none;
+      .sectionTitle {
         cursor: pointer;
+      }
 
-        background-color: transparent;
-        border: none;
-        color: rgb(31, 31, 31);
+      .dropdownWrapper {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        padding-top: 1rem;
+        z-index: 999;
 
-        @media (max-width: $breakpoint-sm) {
-            display: block;
+        opacity: 0;
+        transform: translateY(10px);
+        pointer-events: none;
+        transition: opacity 0.25s ease, transform 0.25s ease;
+
+        .dropdown {
+          min-width: 300px;
+
+          background-color: white;
+          border: 1px solid #b4b4b4;
+          border-radius: 4px;
+
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+          color: rgb(82, 82, 82);
+
+          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.11);
+
+          .category {
+            padding: 1rem;
+            &:hover {
+              background-color: rgb(225, 222, 243);
+            }
+          }
         }
+      }
     }
+  }
 
-    .actions {
-        display: flex;
-        gap: 1rem;
-    }
+  .mobileMenuButton {
+    display: none;
+    padding-top: 3px;
+    border: none;
+    cursor: pointer;
 
-    .action {
-        cursor: pointer;
+    background-color: transparent;
+    border: none;
+    color: rgb(31, 31, 31);
+
+    @media (max-width: $breakpoint-sm) {
+      display: block;
     }
+  }
+
+  .actions {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .action {
+    cursor: pointer;
+  }
 }

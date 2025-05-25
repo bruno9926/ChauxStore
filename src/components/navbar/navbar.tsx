@@ -9,6 +9,42 @@ import { GoHeart, GoPerson, GoSearch, } from 'react-icons/go';
 import { HiMenu } from "react-icons/hi";
 import { IoBagOutline } from "react-icons/io5";
 import React from 'react';
+// types
+import type MenuSection from '@/types/MenuSection';
+
+const sections: MenuSection[] = [
+    {
+        name: "Men",
+        categories: [
+            "Shirts",
+            "T-Shirts",
+            "Polos",
+            "Pants",
+            "Jeans",
+            "Shorts",
+            "Jackets",
+            "Hoodies",
+            "Shoes",
+            "Accessories"
+        ]
+    },
+    {
+        name: "Women",
+        categories: [
+            "Tops",
+            "Blouses",
+            "Dresses",
+            "Skirts",
+            "Pants",
+            "Jeans",
+            "Shorts",
+            "Jackets",
+            "Hoodies",
+            "Shoes",
+            "Accessories"
+        ]
+    }
+];
 
 export default function Navbar() {
 
@@ -16,6 +52,7 @@ export default function Navbar() {
     return (
         <>
             <MobileMenu
+                sections={sections}
                 isOpen={mobileMenuOpen}
                 setMobileMenuOpen={open => setMobileMenuOpen(open)} />
             <NavbarContent setMobileMenuOpen={open => setMobileMenuOpen(open)} />
@@ -44,10 +81,14 @@ const NavbarContent = ({ setMobileMenuOpen }: { setMobileMenuOpen: SetMobileMenu
                 <h2>CX</h2>
             </div>
             <nav className={styles.menuDesktop}>
-                <a href="#">Men</a>
-                <a href="#">Women</a>
-                <a href="#">News</a>
-                <a href="#">Offers</a>
+                {sections.map((section, index) => (
+                    <div key={index} className={styles.menuItem}>
+                        <div className={styles.sectionTitle}>{section.name}</div>
+                        <div className={styles.dropdownWrapper}>
+                            <MenuDropdown section={section} />
+                        </div>
+                    </div>
+                ))}
             </nav>
             <div className={styles.actions}>
                 <Action actionType={ActionType.SEARCH} title='Search' />
@@ -58,6 +99,14 @@ const NavbarContent = ({ setMobileMenuOpen }: { setMobileMenuOpen: SetMobileMenu
         </header>
     )
 }
+
+const MenuDropdown = ({ section }: { section: MenuSection }) => (
+    <div className={styles.dropdown}>
+        {section.categories.map((category, index) => (
+            <a key={index} className={styles.category} href="#">{category}</a>
+        ))}
+    </div>
+)
 
 enum ActionType {
     SEARCH = 'search',
