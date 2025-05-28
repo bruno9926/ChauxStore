@@ -1,6 +1,7 @@
 // components
 import Navbar from "@/components/navbar/navbar";
 import Footer from "@/components/Footer/Footer";
+import { SkeletonTheme } from 'react-loading-skeleton';
 // fonts
 import type { Metadata } from "next";
 // styles
@@ -26,11 +27,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={urbanist.className}>
-        <Navbar />
-        <div className="main-container">
-          {children}
-        </div>
-        <Footer/>
+        <SkeletonTheme baseColor="#e3e3e3" highlightColor="#f5f5f5">
+          <Navbar />
+          <div className="main-container">
+            {children}
+          </div>
+          <Footer />
+        </SkeletonTheme>
       </body>
     </html>
   );

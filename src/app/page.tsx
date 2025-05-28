@@ -1,8 +1,13 @@
 import SectionCarousel from "@/components/SectionCarousel/SectionCarousel";
 import Hero from "@/components/Hero/Hero";
 import products from "@/data/products.json";
+
 import CollectionCarousel from "@/components/CollectionCarousel/CollectionCarousel";
+import CollectionSkeleton from "@/components/CollectionCarousel/Loading";
+
 import Categories from "@/components/Categories/Categories";
+
+import { Suspense } from "react";
 
 export default function Home() {
   return (
@@ -12,7 +17,9 @@ export default function Home() {
       <div className="padded-container">
         <SectionCarousel title="New Arrivals" products={products} />
       </div>
-      <CollectionCarousel />
+      <Suspense fallback={<CollectionSkeleton/>}>
+        <CollectionCarousel />
+      </Suspense>
     </div>
   );
 }
