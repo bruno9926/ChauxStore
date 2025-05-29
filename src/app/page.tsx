@@ -1,6 +1,7 @@
-import SectionCarousel from "@/components/SectionCarousel/SectionCarousel";
+import NewArrivals from "@/components/NewArrivals/NewArrivals";
+import SectionCarouselSkeleton from "@/components/SectionCarousel/Loading";
+
 import Hero from "@/components/Hero/Hero";
-import products from "@/data/products.json";
 
 import CollectionCarousel from "@/components/CollectionCarousel/CollectionCarousel";
 import CollectionSkeleton from "@/components/CollectionCarousel/Loading";
@@ -14,9 +15,9 @@ export default function Home() {
     <div>
       <Hero />
       <Categories />
-      <div className="padded-container">
-        <SectionCarousel title="New Arrivals" products={products} />
-      </div>
+      <Suspense fallback={<SectionCarouselSkeleton/>}>
+        <NewArrivals />
+      </Suspense>
       <Suspense fallback={<CollectionSkeleton/>}>
         <CollectionCarousel />
       </Suspense>
