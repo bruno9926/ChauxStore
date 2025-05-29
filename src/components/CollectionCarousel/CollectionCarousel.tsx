@@ -26,8 +26,7 @@ export default async function CollectionCarousel() {
 }
 
 async function fetchCollections(): Promise<CollectionType[]> {
-    // const response = await fetch(`${process.env.API_URL}/api/collections`);
-    // await new Promise((resolve) => setTimeout(resolve, 3000))
-    // return await response.json();
-    return Promise.resolve([])
+    const response = await fetch(`${process.env.API_URL}/api/collections`);
+    await new Promise((resolve) => setTimeout(resolve, 3000))
+    return await response.json();
 }
