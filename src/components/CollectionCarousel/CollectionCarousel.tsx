@@ -1,6 +1,6 @@
 import CollectionCard from "./CollectionCard/CollectionCard";
 import styles from './CollectionCarousel.module.scss';
-import type CollectionType from "@/types/Collection";
+import { Collection } from "@/generated/prisma";
 
 export default async function CollectionCarousel() {
 
@@ -18,6 +18,7 @@ export default async function CollectionCarousel() {
                         name={collection.name}
                         image={collection.image}
                         color={collection.accentColor}
+                        slug={collection.slug}
                     />
                 ))}
             </div>
@@ -25,7 +26,7 @@ export default async function CollectionCarousel() {
     )
 }
 
-async function fetchCollections(): Promise<CollectionType[]> {
+async function fetchCollections(): Promise<Collection[]> {
     const response = await fetch(`${process.env.API_URL}/api/collections`);
     return await response.json();
 }
