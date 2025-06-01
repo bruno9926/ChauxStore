@@ -3,6 +3,7 @@ import { useState } from 'react';
 
 import styles from './navbar.module.scss';
 // components
+import Link from 'next/link';
 import MobileMenu from './MobileMenu/MobileMenu';
 // icons
 import { GoHeart, GoPerson, GoSearch, } from 'react-icons/go';
@@ -78,7 +79,9 @@ const NavbarContent = ({ setMobileMenuOpen }: { setMobileMenuOpen: SetMobileMenu
         <header className={styles.navbar}>
             <div className={styles.leftContainer}>
                 <MobileMenuButton setMobileMenuOpen={setMobileMenuOpen} />
-                <h2>CX</h2>
+                <Link href={"/"}>
+                    <h2>CX</h2>
+                </Link>
             </div>
             <nav className={styles.menuDesktop}>
                 {sections.map((section, index) => (

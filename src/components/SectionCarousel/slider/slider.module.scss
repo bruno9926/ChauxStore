@@ -11,10 +11,21 @@
   
   margin-top: 1rem;
   padding-bottom: 1rem;
-  padding: 0.15rem;
+  padding: 0.2rem;
 
   @media (max-width: $breakpoint-md) {
     overflow-x: auto;
+  }
+
+  .sliderSlot {
+    min-width: 320px;
+
+    @media(max-width: $breakpoint-md) {
+        min-width: 250px;
+    }
+    @media(max-width: $breakpoint-sm) {
+        min-width: 200px;
+    }
   }
 }
 

@@ -2,7 +2,7 @@
 
 import { useRef } from 'react';
 import Product from '@/components/product/product';
-import { GoArrowRight, GoArrowLeft } from "react-icons/go";   
+import { GoArrowRight, GoArrowLeft } from "react-icons/go";
 // styles
 import styles from './slider.module.scss';
 // types
@@ -25,7 +25,7 @@ export default function Slider({ products }: { products: ProductType[] }) {
             left: direction === Direction.LEFT ? -scrollAmount : scrollAmount,
             behavior: 'smooth',
         });
-    }    
+    }
 
     const Arrow = ({ direction }: { direction: Direction }) => {
         const directionStyles = direction === Direction.LEFT ? styles.left : styles.right;
@@ -39,18 +39,19 @@ export default function Slider({ products }: { products: ProductType[] }) {
     return (
         <div className={styles.wrapper}>
             <div className={styles.slider} ref={sliderRef}>
-            {products.map((product, index) => (
-                <Product
-                    key={index}
-                    image={product.image}
-                    title={product.name}
-                    subtitle={product.category.name}
-                    price={product.price}
-                    isFavorite={product.isFavorite}
-                />
-            ))}
+                {products.map((product, index) => (
+                    <div className={styles.sliderSlot} key={index} >
+                        <Product
+                            image={product.image}
+                            title={product.name}
+                            subtitle={product.category.name}
+                            price={product.price}
+                            isFavorite={product.isFavorite}
+                        />
+                    </div>
+                ))}
             </div>
-            <Arrow direction={Direction.LEFT} />    
+            <Arrow direction={Direction.LEFT} />
             <Arrow direction={Direction.RIGHT} />
         </div>
     )

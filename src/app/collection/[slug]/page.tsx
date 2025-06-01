@@ -1,21 +1,24 @@
 import { Collection, Product } from "@/generated/prisma"
+import CollectionHero from "./components/CollectionHero/CollectionHero";
+import ProductGrid from "./components/ProductsGrid/ProductGrid";
 
-type CollectionWithProducts = Collection & { products: Product[]}
+type CollectionWithProducts = Collection & { products: Product[] }
 
 type CollectionPageProps = {
-    params: { slug: string}
+    params: { slug: string }
 }
 export default async function CollectionPage({ params }: CollectionPageProps) {
     const { slug } = await params;
     const collection: CollectionWithProducts = await fetchCollectionWithProducts(slug);
-
+    
     return (
-        <>
-        <p>{collection.name}</p>
-        <ul>{collection.products.map(product => (
-            <li key={product.id}>{JSON.stringify(product)}</li>
-        ))}</ul>
-        </>
+        <div>
+            <CollectionHero title={collection.name} color={collection.accentColor}/>
+            <ProductGrid products={collection.products} />
+            <div className="padded-container">
+                <h1>Get this Look</h1>
+            </div>
+        </div>
     )
 }
 
