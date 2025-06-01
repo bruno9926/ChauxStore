@@ -22,8 +22,7 @@ export default async function Categories() {
     )
 }
 
-async function getCategories() {
-    return Promise.resolve([])
+async function getCategories(): Promise<Category[]> {
     const response = await fetch(`${process.env.API_URL}/api/categories`);
     return await response.json();
 }
