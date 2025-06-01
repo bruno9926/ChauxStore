@@ -1,9 +1,9 @@
+import { Category } from "@/generated/prisma";
 import styles from "./Categories.module.scss";
-import Category from "./Category/Category";
+import CategoryTile from "./Category/Category";
 
-import categories from '@/data/categories.json';
-
-export default function Categories() {
+export default async function Categories() {
+    const categories: Category[] = await getCategories();
     return (
         <div className={styles.categories}>
             <div className="padded-container">
@@ -11,7 +11,7 @@ export default function Categories() {
             </div>
             <div className={styles.categoriesContainer}>
                 {categories.map(category => (
-                    <Category
+                    <CategoryTile
                         key={category.id}
                         name={category.name}
                         image={category.image}
@@ -20,4 +20,9 @@ export default function Categories() {
             </div>
         </div>
     )
+}
+
+async function getCategories() {
+    const response = await fetch(`${process.env.API_URL}/api/categories`);
+    return await response.json();
 }

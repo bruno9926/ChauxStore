@@ -1,6 +1,6 @@
 export default interface Product {
     name: string,
-    subtitle: string,
+    category: { name: string }
     price: number,
     isFavorite: boolean,
     image: string

@@ -27,11 +27,18 @@ model Product {
   updatedAt    DateTime    @updatedAt
 }
 
+enum Gender {
+  MEN
+  WOMEN
+  UNISEX
+}
+
 model Category {
   id        String    @id @default(uuid())
   name      String
   slug      String    @unique
   image     String
+  gender    Gender    @default(UNISEX)
   products  Product[]
   createdAt DateTime  @default(now())
   updatedAt DateTime  @updatedAt

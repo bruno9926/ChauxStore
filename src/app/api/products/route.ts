@@ -1,66 +1,16 @@
 import { NextResponse } from "next/server"
 import { prisma } from "@/lib/prisma";
 
-// const products = [
-//   {
-//     "image": "/images/products/flame-bomber.png",
-//     "title": "Purple Bomber Flame",
-//     "subtitle": "Bomber Jacket",
-//     "price": 4999,
-//     "isFavorite": false
-//   },
-//   {
-//     "image": "/images/products/lavander-crewneck.png",
-//     "title": "Lavander Ember Crewneck",
-//     "subtitle": "Blouses",
-//     "price": 4999,
-//     "isFavorite": true
-//   },
-//   {
-//     "image": "/images/products/graphite-jean.png",
-//     "title": "Graphite Jean",
-//     "subtitle": "jeans and Pants",
-//     "price": 4999,
-//     "isFavorite": true
-//   },
-//   {
-//     "image": "/images/products/beanie.png",
-//     "title": "Carbon Beanie",
-//     "subtitle": "Hats and Caps",
-//     "price": 4999,
-//     "isFavorite": true
-//   },
-//   {
-//     "image": "/images/products/firefade-denim.png",
-//     "title": "Firefade Denim",
-//     "subtitle": "jeans and Pants",
-//     "price": 4999,
-//     "isFavorite": false
-//   },
-//   {
-//     "image": "/images/products/burn-mark.png",
-//     "title": "Burn Mark",
-//     "subtitle": "Shirts",
-//     "price": 4999,
-//     "isFavorite": false
-//   },
-//   {
-//     "image": "/images/products/burnt-classic.png",
-//     "title": "Burnt Red Classic",
-//     "subtitle": "Shirts",
-//     "price": 4999,
-//     "isFavorite": false
-//   },
-//   {
-//     "image": "/images/products/distortion-flame.png",
-//     "title": "Distortion Blue Flame",
-//     "subtitle": "Oversized T-Shirt",
-//     "price": 4999,
-//     "isFavorite": true
-//   }
-// ]
-
 export async function GET() {
-  const products = await prisma.product.findMany();
+  const products = await prisma.product.findMany({
+    orderBy: { createdAt: 'desc'},
+    take: 10,
+    include: {
+      category: {
+        select: { name: true }
+      }
+    }
+  });
+  
   return NextResponse.json(products);
 }

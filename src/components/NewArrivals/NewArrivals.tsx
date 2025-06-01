@@ -12,6 +12,5 @@ export default async function NewArrivals() {
 
 async function fetchProducts(): Promise<Product[]> {
     const response = await fetch(`${process.env.API_URL}/api/products`);
-    await new Promise((resolve) => setTimeout(resolve, 3000))
     return await response.json();
 }
