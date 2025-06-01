@@ -43,7 +43,7 @@ export default function Slider({ products }: { products: ProductType[] }) {
                 <Product
                     key={index}
                     image={product.image}
-                    title={product.title}
+                    title={product.name}
                     subtitle={product.subtitle}
                     price={product.price}
                     isFavorite={product.isFavorite}

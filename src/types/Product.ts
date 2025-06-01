@@ -1,5 +1,5 @@
 export default interface Product {
-    title: string,
+    name: string,
     subtitle: string,
     price: number,
     isFavorite: boolean,
