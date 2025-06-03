@@ -1,0 +1,37 @@
+.mainContent {
+  margin-top: 100dvh;
+  background-color: #ececec;
+}
+
+.description {
+  font-size: 1.2rem;
+  font-style: italic;
+  padding: 1rem;
+  padding-left: 3rem;
+  color: rgb(155, 155, 155);
+
+  width: 100%;
+  max-width: 70rem;
+
+  @media (max-width: $breakpoint-sm) {
+    font-size: 0.8rem;
+    padding-left: 1rem;
+    padding: 0.8rem;
+  }
+}
+
+.collectionTitle {
+  display: flex;
+  gap: 1rem;
+  font-size: 1.5rem;
+  align-items: center;
+  padding-top: 1rem;
+
+  @media (max-width: $breakpoint-sm) {
+    font-size: 1rem;
+  }
+
+  svg {
+    margin-top: 15px;
+  }
+}

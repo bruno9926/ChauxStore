@@ -1,11 +1,11 @@
 import Slider from './slider/slider';
 import styles from './SectionCarousel.module.scss';
 // types
-import type Product from '@/types/Product';
+import { Product, Category } from '@/generated/prisma';
 
 type SectionCarouselProps = {
     title: string;
-    products: Product[];
+    products: (Product & { category: Category })[];
 };
 
 export default function SectionCarousel({ title, products }: SectionCarouselProps) {

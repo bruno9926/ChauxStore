@@ -1,14 +1,17 @@
 'use client';
 
 import { useRef } from 'react';
-import Product from '@/components/product/product';
+import ProductCard from '@/components/product/product';
 import { GoArrowRight, GoArrowLeft } from "react-icons/go";
 // styles
 import styles from './slider.module.scss';
 // types
-import type ProductType from '@/types/Product';
+import { Product, Category } from '@/generated/prisma';
 
-export default function Slider({ products }: { products: ProductType[] }) {
+type SliderProps = {
+    products: (Product & { category: Category })[];
+}
+export default function Slider({ products }: SliderProps) {
 
     enum Direction {
         LEFT = 'left',
@@ -41,12 +44,12 @@ export default function Slider({ products }: { products: ProductType[] }) {
             <div className={styles.slider} ref={sliderRef}>
                 {products.map((product, index) => (
                     <div className={styles.sliderSlot} key={index} >
-                        <Product
+                        <ProductCard
                             image={product.image}
                             title={product.name}
                             subtitle={product.category.name}
                             price={product.price}
-                            isFavorite={product.isFavorite}
+                            isFavorite={false} // this depends on the user, not the product entity
                         />
                     </div>
                 ))}

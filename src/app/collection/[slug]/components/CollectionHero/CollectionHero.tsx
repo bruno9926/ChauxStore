@@ -1,7 +1,5 @@
-import { GoArrowLeft } from "react-icons/go";   
 import styles from './CollectionHero.module.scss';
 import Image from 'next/image';
-import Link from 'next/link';
 
 type CollectionHeroProps = {
     title: string,
@@ -17,17 +15,6 @@ export default function CollectionHero({ title, color }: CollectionHeroProps) {
                     <Image src="/images/step-into-the-flame-h.png" alt="Hero Image Desktop" className={styles.heroImage} fill />
                 </picture>
             </div>
-            <div
-                className={styles.overlay}
-                style={{ "--accent-color": color } as React.CSSProperties}>
-                <h1>{title}</h1>
-            </div>
-            <Link
-                href={"/"}
-                className={styles.backOverlay}
-            >
-                <GoArrowLeft/>
-            </Link>
         </div>
     );
 }

@@ -44,6 +44,14 @@ const sections: MenuSection[] = [
             "Shoes",
             "Accessories"
         ]
+    },
+    {
+        name: "Promos",
+        categories: []
+    },
+    {
+        name: "New Arrivals",
+        categories: []
     }
 ];
 

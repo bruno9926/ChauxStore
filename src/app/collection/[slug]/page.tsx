@@ -1,6 +1,13 @@
+// model
 import { Collection, Product } from "@/generated/prisma"
+// styles
+import styles from './styles.module.scss';
+import { GoArrowLeft } from "react-icons/go";
+// components
 import CollectionHero from "./components/CollectionHero/CollectionHero";
 import ProductGrid from "./components/ProductsGrid/ProductGrid";
+import Looks from "./components/Looks/Looks";
+import Link from 'next/link';
 
 type CollectionWithProducts = Collection & { products: Product[] }
 
@@ -10,13 +17,30 @@ type CollectionPageProps = {
 export default async function CollectionPage({ params }: CollectionPageProps) {
     const { slug } = await params;
     const collection: CollectionWithProducts = await fetchCollectionWithProducts(slug);
-    
+
     return (
-        <div>
-            <CollectionHero title={collection.name} color={collection.accentColor}/>
+        <div className={styles.mainContent}>
+            <CollectionHero title={collection.name} color={collection.accentColor} />
+            <Title title={collection.name}/>
+            <div className={styles.description}>
+                <p>
+                    Ignited by rebellion and self-expression. Featuring bold reds, deep blacks, and electric purples, each piece fuses sharp silhouettes with moody tones. Walk with fire. Move with purpose. Burn bright.
+                </p>
+            </div>
             <ProductGrid products={collection.products} />
-            <div className="padded-container">
-                <h1>Get this Look</h1>
+            <Looks />
+        </div>
+    )
+}
+
+const Title = ({ title }: { title: string }) => {
+    return (
+        <div className="padded-container">
+            <div className={styles.collectionTitle}>
+                <Link href={"/"}>
+                    <GoArrowLeft />
+                </Link>
+                <h1>{title}</h1>
             </div>
         </div>
     )
