@@ -23,9 +23,7 @@ export default async function CollectionPage({ params }: CollectionPageProps) {
             <CollectionHero title={collection.name} color={collection.accentColor} />
             <Title title={collection.name}/>
             <div className={styles.description}>
-                <p>
-                    Ignited by rebellion and self-expression. Featuring bold reds, deep blacks, and electric purples, each piece fuses sharp silhouettes with moody tones. Walk with fire. Move with purpose. Burn bright.
-                </p>
+                <p>{collection.description}</p>
             </div>
             <ProductGrid products={collection.products} />
             <Looks />

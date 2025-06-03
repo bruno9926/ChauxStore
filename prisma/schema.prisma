@@ -47,6 +47,7 @@ model Category {
 model Collection {
   id          String    @id @default(uuid())
   name        String
+  description String?
   slug        String    @unique
   image       String
   accentColor String
