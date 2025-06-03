@@ -20,7 +20,7 @@ export default async function CollectionPage({ params }: CollectionPageProps) {
 
     return (
         <div className={styles.mainContent}>
-            <CollectionHero title={collection.name} color={collection.accentColor} />
+            <CollectionHero/>
             <Title title={collection.name} />
             <div className={styles.description}>
                 <p>{collection.description}</p>
