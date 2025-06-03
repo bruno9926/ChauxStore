@@ -1,3 +1,6 @@
+'use client'
+import { CldImage } from 'next-cloudinary';
+
 import Image from 'next/image';
 import styles from './product.module.scss'
 // icons
@@ -17,7 +20,7 @@ export default function ProductCard({ image, title, subtitle, price, isFavorite 
     return (
         <div className={styles.card}>
             <div className={styles.imageWrapper}>
-                <Image src={image ?? imagePlaceHolder} alt={`${image}-image`} fill className={styles.image} /> : null
+                <CldImage src={image ?? imagePlaceHolder} alt={`${image}-image`} fill className={styles.image} /> : null
                 {isFavorite ?
                     <FaHeart className={styles.heart} size={24} /> :
                     <FiHeart className={styles.heart} size={24} />
