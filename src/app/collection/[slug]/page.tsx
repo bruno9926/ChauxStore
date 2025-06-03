@@ -46,7 +46,7 @@ const Title = ({ title }: { title: string }) => {
     )
 }
 
-async function fetchCollectionWithProducts(slug: string): Promise<any> {
+async function fetchCollectionWithProducts(slug: string): Promise<CollectionWithProducts> {
     const response = await fetch(`${process.env.API_URL}/api/collections/${slug}/products`, { cache: "no-store" });
     return response.json();
 }
