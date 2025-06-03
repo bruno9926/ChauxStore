@@ -12,7 +12,7 @@ import Link from 'next/link';
 type CollectionWithProducts = Collection & { products: Product[] }
 
 type CollectionPageProps = {
-    params: { slug: string }
+    params: Promise<{ slug: string }>
 }
 export default async function CollectionPage({ params }: CollectionPageProps) {
     const { slug } = await params;
