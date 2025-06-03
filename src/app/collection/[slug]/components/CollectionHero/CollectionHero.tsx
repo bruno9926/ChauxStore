@@ -1,10 +1,6 @@
 import styles from './CollectionHero.module.scss';
 import Image from 'next/image';
 
-type CollectionHeroProps = {
-    image: string
-}
-
 export default function CollectionHero() {
     return (
         <div className={styles.hero}>
