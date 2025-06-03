@@ -1,7 +1,6 @@
 'use client'
 import { CldImage } from 'next-cloudinary';
 
-import Image from 'next/image';
 import styles from './product.module.scss'
 // icons
 import { FiHeart } from "react-icons/fi";
