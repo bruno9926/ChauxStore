@@ -2,11 +2,10 @@ import styles from './CollectionHero.module.scss';
 import Image from 'next/image';
 
 type CollectionHeroProps = {
-    title: string,
-    color: string
+    image: string
 }
 
-export default function CollectionHero({ title, color }: CollectionHeroProps) {
+export default function CollectionHero() {
     return (
         <div className={styles.hero}>
             <div className={styles.imageWrapper}>
